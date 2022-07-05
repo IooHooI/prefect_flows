@@ -49,7 +49,7 @@ run_in_bash = ShellTask(name='run a command in bash')
 with Flow('Best Practices (Docker)') as flow:
     flow.run_config = DockerRun()
     
-    flow.storage = GitHub(repo="https://github.com/IooHooI/prefect_flows", path="docker_flow_on_github.py")
+    flow.storage = GitHub(repo="https://github.com/IooHooI/prefect_flows", path="docker_flow_on_github.py", ref="main")
 
     # store the result of each task call, even if you don't use the result again
     two = plus_one(1)
